@@ -29,7 +29,7 @@ export default function CategoryList (props) {
             <div className="cardContainer">
                 {items.map((subj)=>
                     {
-                        if(subj.patch>6.0) return(null);
+                        if(subj.patch>=6.0) return(null);
                         return(
                             <InfoCard
                                 key={subj.id}
