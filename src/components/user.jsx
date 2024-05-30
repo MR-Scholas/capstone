@@ -21,7 +21,7 @@ export default function User (props)
         <div className="userPanel">
             {loggedIn ? (
                 <div className="loggedInPanel">
-                    <h3>{user.username}</h3>
+                    <h4>Welcome, {user}</h4>
                     <button onClick={logout}>Logout</button>
                 </div>
             ) : (
@@ -29,13 +29,11 @@ export default function User (props)
                     <div className="login">
                         <input
                             type="text"
-                            value={username}
                             onChange={(e)=>setUsername(e.target.value)}
                             placeholder="Username"
                         />
                         <input
                             type="password"
-                            value={password}
                             onChange={(e)=>setPassword(e.target.value)}
                             placeholder="Password"
                         />
@@ -44,13 +42,11 @@ export default function User (props)
                     <div className="register">
                         <input
                             type="text"
-                            value={username}
                             onChange={(e)=>setUsername(e.target.value)}
                             placeholder="Username"
                         />
                         <input
                             type="password"
-                            value={password}
                             onChange={(e)=>setPassword(e.target.value)}
                             placeholder="Password"
                         />

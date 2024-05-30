@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Owned from "./owned";
 
 
 export default function InfoCard (props)
@@ -12,6 +13,7 @@ export default function InfoCard (props)
             <div>Added: {props.patch}</div>
             <div>Owned: {props.owned}</div>
             <div>ID: {props.id}</div>
+            <div><Owned/></div>
         </div>
     )
 }

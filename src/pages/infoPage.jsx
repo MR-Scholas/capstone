@@ -23,7 +23,18 @@ export default function InfoPage(props)
     useEffect(()=>{ getSubject() },[id])
     return (
         <div className="infoPage">
-            
+            <img src={subject.icon}/>
+            <h3>{subject.name}</h3>
+            {
+                Object.keys(subject).map((key)=>
+                {
+                    if(key!=='icon'&&key!=='name') 
+                    {
+                        if(typeof subject[key]!='object') return(<div key={key}>{key}: {subject[key]}</div>)
+                    }
+                    return null;
+                })
+            }
         </div>
     )
 

@@ -2,17 +2,6 @@ import { createContext, useState } from "react";
 
 export const UserContext=createContext()
 
-// const loginVerification=async(username,password)=>
-// {
-//     let collection=await db.collection("users")
-//     let query={username:username}
-//     let result=await collection.findOne(query)
-
-//     if(!result) return(false)
-//     else if(password===result.password) return(true)
-//     else return(false)
-// }
-
 export function UserProvider({children})
 {
     const [loggedIn,setLoggedIn]=useState(false)
@@ -22,7 +11,7 @@ export function UserProvider({children})
     {
         try 
         {
-            const response = await fetch('/login', 
+            const response = await fetch('http://localhost:3000/login', 
             {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
@@ -47,7 +36,7 @@ export function UserProvider({children})
     {
         try 
         {
-            const response = await fetch('/register', 
+            const response = await fetch('http://localhost:3000/register', 
             {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
@@ -59,13 +48,10 @@ export function UserProvider({children})
                 setUser(username);
                 setLoggedIn(true);
             } 
-            else if (response.status === 409) 
+            else  
             {
-                alert('Username already exists');
-            } 
-            else 
-            {
-                alert('Error during registration');
+                const errorMessage=await response.text()
+                alert(errorMessage)
             }
         } catch (error) 
         {

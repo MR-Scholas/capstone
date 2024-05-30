@@ -4,6 +4,9 @@ export default function Nav (props)
 {
     return(
         <div className="nav">
+            <Link to="/">
+                <div>🏠</div>
+            </Link>
             <Link to="/achievements">
                 <div>Achievements</div>
             </Link>

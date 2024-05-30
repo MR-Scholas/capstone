@@ -3,6 +3,7 @@ body
   margin:0%;
   padding:0%;
   justify-content:center;
+  justify-items: center;
   display:flex;
 }
 
@@ -56,5 +57,29 @@ h2
 {
   display:flex;
   justify-content:left;
+}
 
+.userPanel
+{
+  width:80%;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  justify-items:center;
+}
+
+.loggedOutPanel
+{
+  text-align:center;
+}
+
+.loggedInPanel
+{
+  text-align:center;
+}
+
+.infoPage
+{
+  width:50%;
 }
