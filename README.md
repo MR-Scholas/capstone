@@ -1,1 +1,3 @@
-A practice assignment using Vite and the ffxivcollect API to create a React app for viewing every armoire item, non-default emote, and non-default hairstyle from patch 2.0 up to patch 5.5.
+An improved version of SBA-7, using the ffxivcollect API, to create a MERN stack application that displays the API's data on various categories of collectibles. Functionality has been added to create a user account which is stored in a MongoDB database in the backend. Logging in would then allow the user to claim collectibles, adding their IDs to an array in the database which would then allow for a page that displays all of a user's claimed items and the percentage of their collection that has been completed in each category relative to the total number of items in that category within the API.
+
+Currently, it is incomplete and only the login functionality is properly implemented.
