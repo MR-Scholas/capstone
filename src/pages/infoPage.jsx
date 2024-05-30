@@ -30,6 +30,8 @@ export default function InfoPage(props)
                 {
                     if(key!=='icon'&&key!=='name') 
                     {
+                        if(key==='image') return(<div><img src={subject[key]}/></div>)
+                        if(key==='bgm') return(<div><audio controls src={subject[key]}/></div>)
                         if(typeof subject[key]!='object') return(<div key={key}>{key}: {subject[key]}</div>)
                     }
                     return null;
