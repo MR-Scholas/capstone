@@ -1,0 +1,60 @@
+body
+{
+  margin:0%;
+  padding:0%;
+  justify-content:center;
+  display:flex;
+}
+
+h2
+{
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+.nav
+{
+    display:flex;
+    justify-content:space-around;
+    background-color:black;
+    color:white;
+    padding:15px;
+    font-size:2em;
+    width:95vw;
+    max-width:100%;
+}
+
+.nav a
+{
+    color:white;
+    text-decoration:none;
+}
+
+.cardContainer
+{
+  display:flex;
+  flex-wrap:wrap;
+  width:95vw;
+  justify-content:center;
+}
+
+.infoCard
+{
+  border:solid 1px black;
+  padding:5px;
+  width:30vw;
+  margin:.1%;
+}
+
+.icon
+{
+  max-height:40px;
+  max-width:40px;
+}
+
+.cardHeader
+{
+  display:flex;
+  justify-content:left;
+
+}
