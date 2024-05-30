@@ -11,6 +11,10 @@ function App() {
   return (
     <UserProvider>
       <div className="App">
+        <div class="backgroundContainer">
+          <div class="background"></div>
+          <div class="overlay"></div>
+        </div>
         <Nav/>
         <User/>
         <Routes>
